@@ -23,6 +23,7 @@
 #import "ButtonTestController.h"
 #import "TabBarTestController.h"
 #import "DownloadProgressTestController.h"
+#import "ActionSheetTestController.h"
 
 @implementation AppDelegate
 
@@ -182,6 +183,12 @@
       toViewController: [DownloadProgressTestController class]
               selector: nil
             transition: 0];
+    [map          from: @"tt://actionSheetTest" 
+                parent: @"tt://catalog" 
+      toViewController: [ActionSheetTestController class] 
+              selector: nil 
+            transition: 0];
+
   
   if (![navigator restoreViewControllers]) {
     [navigator openURLAction:[TTURLAction actionWithURLPath:@"tt://catalog"]];
